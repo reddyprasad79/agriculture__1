@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — STACKLY Agriculture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+<nav class="site-nav" id="siteNav">
+  <a class="brand" href="index.html">
+    <img src="images/stackly-logo.webp" alt="STACKLY Logo">
+  </a>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions" id="navActions">
+    <a class="btn btn-light" href="signin.html">Sign In</a>
+    <a class="btn btn-gold" href="register.html">Register</a>
+  </div>
+</nav>
+
+
+<section class="auth-page" style="--auth-image:url('images/register-harvest.webp')">
+  <a class="auth-logo" href="index.html"><img src="images/stackly-logo.webp" alt="STACKLY Logo"></a>
+  <a class="back-home" href="index.html">Back to Home</a>
+  <form class="auth-card reveal" id="registerForm">
+    <h1>Create Account</h1>
+    <input type="text" id="regName" placeholder="Name" pattern="[A-Za-z ]+" required>
+    <input type="email" id="regEmail" placeholder="Email ID" required>
+    <input type="tel" id="regPhone" placeholder="Phone Number" pattern="[0-9]+" required>
+    <input type="password" id="regPassword" placeholder="Password" minlength="6" required>
+    <input type="password" id="regConfirm" placeholder="Confirm Password" minlength="6" required>
+    <button class="btn btn-gold" type="submit">Create Account</button>
+    <p>Already have account? <a href="signin.html">Sign In</a></p>
+  </form>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Dashboard — STACKLY Agriculture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page" data-role="farmer">
+
+<div class="dash-layout">
+  <aside class="dash-sidebar">
+    <a class="dash-logo" href="index.html"><img src="images/stackly-logo.webp" alt="STACKLY Logo"></a>
+    <div class="dash-profile">
+      <strong>Farmer Dashboard</strong>
+      <span id="dashboardEmail">farmer@stackly.com</span>
+    </div>
+    <nav class="dash-menu">
+      <button class="dash-link active" data-target="overview" data-label="Overview">Overview</button>
+      <button class="dash-link" data-target="crops" data-label="Crop Monitoring">Crop Monitoring</button>
+      <button class="dash-link" data-target="irrigation" data-label="Irrigation">Irrigation</button>
+      <button class="dash-link" data-target="soil" data-label="Soil Health">Soil Health</button>
+      <button class="dash-link" data-target="advisory" data-label="Advisory">Advisory</button>
+      <button class="dash-link" data-target="tasks" data-label="Tasks">Tasks</button>
+      <button class="dash-link" data-target="reports" data-label="Reports">Reports</button>
+      <button class="dash-link" data-target="messages" data-label="Messages">Messages</button>
+      <button class="dash-link" data-target="settings" data-label="Settings">Settings</button>
+      <button class="logout-btn" id="logoutBtn">Sign Out</button>
+    </nav>
+  </aside>
+
+  <main class="dash-main">
+    <section class="dash-topbar">
+      <div>
+        <h1 id="dashTitle">Overview</h1>
+        <p id="dashSub">Manage your farm operations from your STACKLY dashboard.</p>
+      </div>
+      <a class="dash-home-btn" href="index.html">Back to Home</a>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="kpi-card"><span>Active Crops</span><strong>12</strong></div>
+      <div class="kpi-card"><span>Crop Health</span><strong>86%</strong></div>
+      <div class="kpi-card"><span>Water Saved</span><strong>18%</strong></div>
+      <div class="kpi-card"><span>Open Tasks</span><strong>09</strong></div>
+    </section>
+
+    <section class="dash-panel active" data-panel="overview">
+      <div class="panel-grid">
+        <div class="dash-card">
+          <h2>Farm Performance</h2>
+          <div class="chart-bars"><i style="height:48%"></i><i style="height:75%"></i><i style="height:62%"></i><i style="height:88%"></i><i style="height:68%"></i><i style="height:82%"></i></div>
+        </div>
+        <div class="dash-card">
+          <h2>Today’s Summary</h2>
+          <div class="progress-list">
+            <div class="progress-item"><label>Crop Growth <span>86%</span></label><div class="progress-track"><i style="width:86%"></i></div></div>
+            <div class="progress-item"><label>Irrigation Complete <span>72%</span></label><div class="progress-track"><i style="width:72%"></i></div></div>
+            <div class="progress-item"><label>Task Progress <span>64%</span></label><div class="progress-track"><i style="width:64%"></i></div></div>
+          </div>
+          <div class="action-row"><button class="dash-action" data-fake-action="Farm summary exported">Export Summary</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="crops">
+      <div class="dash-card">
+        <h2>Crop Monitoring</h2>
+        <table class="dash-table">
+          <tr><th>Crop</th><th>Field</th><th>Stage</th><th>Health</th><th>Status</th></tr>
+          <tr><td>Wheat</td><td>Field A</td><td>Flowering</td><td>89%</td><td><span class="status green">Healthy</span></td></tr>
+          <tr><td>Paddy</td><td>Field B</td><td>Growth</td><td>78%</td><td><span class="status gold">Watch</span></td></tr>
+          <tr><td>Vegetables</td><td>Field C</td><td>Harvest Ready</td><td>91%</td><td><span class="status green">Ready</span></td></tr>
+        </table>
+        <div class="action-row"><button class="dash-action" data-fake-action="Crop record added">Add Crop Record</button><button class="dash-action" data-fake-action="Crop health updated">Update Health</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="irrigation">
+      <div class="dash-card">
+        <h2>Irrigation Schedule</h2>
+        <table class="dash-table">
+          <tr><th>Field</th><th>Time</th><th>Duration</th><th>Moisture</th><th>Status</th></tr>
+          <tr><td>Field A</td><td>06:00 AM</td><td>45 mins</td><td>Good</td><td><span class="status green">Done</span></td></tr>
+          <tr><td>Field B</td><td>04:30 PM</td><td>60 mins</td><td>Low</td><td><span class="status gold">Pending</span></td></tr>
+          <tr><td>Field C</td><td>Tomorrow</td><td>30 mins</td><td>Stable</td><td><span class="status blue">Planned</span></td></tr>
+        </table>
+        <div class="action-row"><button class="dash-action" data-fake-action="Irrigation schedule saved">Save Schedule</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="soil">
+      <div class="dash-card">
+        <h2>Soil Health</h2>
+        <div class="progress-list">
+          <div class="progress-item"><label>Nitrogen <span>74%</span></label><div class="progress-track"><i style="width:74%"></i></div></div>
+          <div class="progress-item"><label>Moisture <span>68%</span></label><div class="progress-track"><i style="width:68%"></i></div></div>
+          <div class="progress-item"><label>Organic Matter <span>81%</span></label><div class="progress-track"><i style="width:81%"></i></div></div>
+        </div>
+        <div class="action-row"><button class="dash-action" data-fake-action="Soil report generated">Generate Soil Report</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="advisory">
+      <div class="dash-card">
+        <h2>Advisory Notes</h2>
+        <div class="message-list">
+          <div class="message-item"><strong>Weather Advisory</strong><p>Light irrigation recommended for Field B in the evening.</p></div>
+          <div class="message-item"><strong>Pest Alert</strong><p>Monitor lower leaves of paddy crop for early pest signs.</p></div>
+          <div class="message-item"><strong>Harvest Guidance</strong><p>Vegetable batch can be prepared for market within 48 hours.</p></div>
+        </div>
+        <div class="action-row"><button class="dash-action" data-fake-action="Advisory marked as read">Mark All Read</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="tasks">
+      <div class="dash-card">
+        <h2>Farm Tasks</h2>
+        <div class="task-list">
+          <div class="task-item"><strong>Check Field B moisture</strong><p>Due today before 5 PM</p></div>
+          <div class="task-item"><strong>Update crop photo records</strong><p>Due tomorrow morning</p></div>
+          <div class="task-item"><strong>Prepare harvest crates</strong><p>Due in 2 days</p></div>
+        </div>
+        <div class="action-row"><button class="dash-action" data-fake-action="New task created">Create Task</button><button class="dash-action" data-fake-action="Task list updated">Update Tasks</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="reports">
+      <div class="dash-card">
+        <h2>Reports</h2>
+        <table class="dash-table">
+          <tr><th>Report</th><th>Period</th><th>Status</th><th>Action</th></tr>
+          <tr><td>Crop Health Report</td><td>Weekly</td><td><span class="status green">Ready</span></td><td><button class="dash-action" data-fake-action="Crop report downloaded">Download</button></td></tr>
+          <tr><td>Water Usage Report</td><td>Monthly</td><td><span class="status blue">Generated</span></td><td><button class="dash-action" data-fake-action="Water report downloaded">Download</button></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="messages">
+      <div class="dash-card">
+        <h2>Messages</h2>
+        <div class="message-list">
+          <div class="message-item"><strong>STACKLY Advisor</strong><p>Your soil report has been reviewed.</p></div>
+          <div class="message-item"><strong>Market Team</strong><p>Buyer request received for vegetable batch.</p></div>
+        </div>
+        <div class="action-row"><button class="dash-action" data-fake-action="Message sent">Send Message</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="settings">
+      <div class="dash-card">
+        <h2>Settings</h2>
+        <div class="settings-grid">
+          <div class="settings-box"><strong>Profile</strong><p>Update farm name, contact details, and region.</p></div>
+          <div class="settings-box"><strong>Notifications</strong><p>Manage weather, irrigation, and advisory alerts.</p></div>
+        </div>
+        <div class="action-row"><button class="dash-action" data-fake-action="Settings saved">Save Settings</button></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="action-status" id="actionStatus"></div>
+<script src="script.js"></script>
+</body>
+</html>

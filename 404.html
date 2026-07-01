@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — STACKLY Agriculture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="">
+
+<nav class="site-nav" id="siteNav">
+  <a class="brand" href="index.html">
+    <img src="images/stackly-logo.webp" alt="STACKLY Logo">
+  </a>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions" id="navActions">
+    <a class="btn btn-light" href="signin.html">Sign In</a>
+    <a class="btn btn-gold" href="register.html">Register</a>
+  </div>
+</nav>
+
+
+<section class="error-page" style="--error-image:url('images/error-landscape.webp')">
+  <div class="error-card reveal">
+    <img src="images/stackly-logo.webp" alt="STACKLY Logo">
+    <p class="eyebrow">404 Page</p>
+    <h1>Page Not Found</h1>
+    <p>The agriculture page you are trying to open is unavailable. Please go back or return to the STACKLY home page.</p>
+    <div class="hero-actions center-actions">
+      <button class="btn btn-outline dark" onclick="history.back()">Back</button>
+      <a href="index.html" class="btn btn-gold">Go to Home</a>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

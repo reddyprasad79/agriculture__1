@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — STACKLY Agriculture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+<nav class="site-nav" id="siteNav">
+  <a class="brand" href="index.html">
+    <img src="images/stackly-logo.webp" alt="STACKLY Logo">
+  </a>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Open Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions" id="navActions">
+    <a class="btn btn-light" href="signin.html">Sign In</a>
+    <a class="btn btn-gold" href="register.html">Register</a>
+  </div>
+</nav>
+
+
+<section class="auth-page" style="--auth-image:url('images/signin-field.webp')">
+  <a class="auth-logo" href="index.html"><img src="images/stackly-logo.webp" alt="STACKLY Logo"></a>
+  <a class="back-home" href="index.html">Back to Home</a>
+  <form class="auth-card reveal" id="signinForm">
+    <h1>Sign In</h1>
+    <input type="email" id="signinEmail" placeholder="Email ID" required>
+    <input type="password" id="signinPassword" placeholder="Password" minlength="6" required>
+    <select id="signinRole" required>
+      <option value="">Select Role</option>
+      <option value="farmer">Farmer</option>
+      <option value="agri">Agri Business</option>
+    </select>
+    <a href="404.html" class="form-link">Forgot Password?</a>
+    <button class="btn btn-gold" type="submit">Sign In</button>
+    <p>New to STACKLY? <a href="register.html">Create Account</a></p>
+  </form>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

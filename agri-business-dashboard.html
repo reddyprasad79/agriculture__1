@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agri Business Dashboard — STACKLY Agriculture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page" data-role="agri">
+
+<div class="dash-layout">
+  <aside class="dash-sidebar">
+    <a class="dash-logo" href="index.html"><img src="images/stackly-logo.webp" alt="STACKLY Logo"></a>
+    <div class="dash-profile">
+      <strong>Agri Business Dashboard</strong>
+      <span id="dashboardEmail">business@stackly.com</span>
+    </div>
+    <nav class="dash-menu">
+      <button class="dash-link active" data-target="overview" data-label="Overview">Overview</button>
+      <button class="dash-link" data-target="inventory" data-label="Inventory">Inventory</button>
+      <button class="dash-link" data-target="orders" data-label="Orders">Orders</button>
+      <button class="dash-link" data-target="suppliers" data-label="Suppliers">Suppliers</button>
+      <button class="dash-link" data-target="market" data-label="Market Prices">Market Prices</button>
+      <button class="dash-link" data-target="analytics" data-label="Analytics">Analytics</button>
+      <button class="dash-link" data-target="reports" data-label="Reports">Reports</button>
+      <button class="dash-link" data-target="messages" data-label="Messages">Messages</button>
+      <button class="dash-link" data-target="settings" data-label="Settings">Settings</button>
+      <button class="logout-btn" id="logoutBtn">Sign Out</button>
+    </nav>
+  </aside>
+
+  <main class="dash-main">
+    <section class="dash-topbar">
+      <div>
+        <h1 id="dashTitle">Overview</h1>
+        <p id="dashSub">Manage agri business operations from your STACKLY dashboard.</p>
+      </div>
+      <a class="dash-home-btn" href="index.html">Back to Home</a>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="kpi-card"><span>Total Orders</span><strong>148</strong></div>
+      <div class="kpi-card"><span>Revenue</span><strong>₹18.4L</strong></div>
+      <div class="kpi-card"><span>Suppliers</span><strong>42</strong></div>
+      <div class="kpi-card"><span>Inventory Health</span><strong>91%</strong></div>
+    </section>
+
+    <section class="dash-panel active" data-panel="overview">
+      <div class="panel-grid">
+        <div class="dash-card">
+          <h2>Business Performance</h2>
+          <div class="chart-bars"><i style="height:52%"></i><i style="height:68%"></i><i style="height:78%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:84%"></i></div>
+        </div>
+        <div class="dash-card">
+          <h2>Performance Progress</h2>
+          <div class="progress-list">
+            <div class="progress-item"><label>Order Fulfillment <span>88%</span></label><div class="progress-track"><i style="width:88%"></i></div></div>
+            <div class="progress-item"><label>Inventory Accuracy <span>91%</span></label><div class="progress-track"><i style="width:91%"></i></div></div>
+            <div class="progress-item"><label>Supplier Response <span>76%</span></label><div class="progress-track"><i style="width:76%"></i></div></div>
+          </div>
+          <div class="action-row"><button class="dash-action" data-fake-action="Business summary exported">Export Summary</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="inventory">
+      <div class="dash-card">
+        <h2>Inventory</h2>
+        <table class="dash-table">
+          <tr><th>Item</th><th>Stock</th><th>Warehouse</th><th>Status</th></tr>
+          <tr><td>Wheat Batch</td><td>18 Tons</td><td>Bengaluru</td><td><span class="status green">In Stock</span></td></tr>
+          <tr><td>Organic Vegetables</td><td>4 Tons</td><td>HSR Hub</td><td><span class="status gold">Low Stock</span></td></tr>
+          <tr><td>Paddy</td><td>22 Tons</td><td>Mysuru</td><td><span class="status green">Ready</span></td></tr>
+        </table>
+        <div class="action-row"><button class="dash-action" data-fake-action="Inventory item added">Add Inventory</button><button class="dash-action" data-fake-action="Inventory updated">Update Stock</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="orders">
+      <div class="dash-card">
+        <h2>Orders</h2>
+        <table class="dash-table">
+          <tr><th>Order ID</th><th>Customer</th><th>Product</th><th>Status</th></tr>
+          <tr><td>#AG1021</td><td>FreshKart</td><td>Vegetables</td><td><span class="status blue">Processing</span></td></tr>
+          <tr><td>#AG1022</td><td>GreenMart</td><td>Wheat</td><td><span class="status green">Delivered</span></td></tr>
+          <tr><td>#AG1023</td><td>Organic Hub</td><td>Paddy</td><td><span class="status gold">In Transit</span></td></tr>
+        </table>
+        <div class="action-row"><button class="dash-action" data-fake-action="New order created">Create Order</button><button class="dash-action" data-fake-action="Order status updated">Update Status</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="suppliers">
+      <div class="dash-card">
+        <h2>Suppliers</h2>
+        <table class="dash-table">
+          <tr><th>Supplier</th><th>Region</th><th>Category</th><th>Status</th></tr>
+          <tr><td>Rural Growers Co.</td><td>Karnataka</td><td>Vegetables</td><td><span class="status green">Active</span></td></tr>
+          <tr><td>Golden Harvest Farms</td><td>Andhra Pradesh</td><td>Wheat</td><td><span class="status green">Active</span></td></tr>
+          <tr><td>Organic Valley</td><td>Tamil Nadu</td><td>Organic Produce</td><td><span class="status gold">Review</span></td></tr>
+        </table>
+        <div class="action-row"><button class="dash-action" data-fake-action="Supplier added">Add Supplier</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="market">
+      <div class="dash-card">
+        <h2>Market Prices</h2>
+        <table class="dash-table">
+          <tr><th>Crop</th><th>Today Price</th><th>Change</th><th>Trend</th></tr>
+          <tr><td>Wheat</td><td>₹2,450 / quintal</td><td>+2.4%</td><td><span class="status green">Up</span></td></tr>
+          <tr><td>Paddy</td><td>₹2,180 / quintal</td><td>-0.8%</td><td><span class="status red">Down</span></td></tr>
+          <tr><td>Tomato</td><td>₹32 / kg</td><td>+5.1%</td><td><span class="status green">Up</span></td></tr>
+        </table>
+        <div class="action-row"><button class="dash-action" data-fake-action="Market prices refreshed">Refresh Prices</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="analytics">
+      <div class="dash-card">
+        <h2>Analytics</h2>
+        <div class="chart-bars"><i style="height:44%"></i><i style="height:62%"></i><i style="height:81%"></i><i style="height:72%"></i><i style="height:92%"></i><i style="height:70%"></i><i style="height:86%"></i></div>
+        <div class="action-row"><button class="dash-action" data-fake-action="Analytics refreshed">Refresh Analytics</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="reports">
+      <div class="dash-card">
+        <h2>Reports</h2>
+        <table class="dash-table">
+          <tr><th>Report</th><th>Period</th><th>Status</th><th>Action</th></tr>
+          <tr><td>Sales Report</td><td>Monthly</td><td><span class="status green">Ready</span></td><td><button class="dash-action" data-fake-action="Sales report downloaded">Download</button></td></tr>
+          <tr><td>Supplier Report</td><td>Weekly</td><td><span class="status blue">Generated</span></td><td><button class="dash-action" data-fake-action="Supplier report downloaded">Download</button></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="messages">
+      <div class="dash-card">
+        <h2>Messages</h2>
+        <div class="message-list">
+          <div class="message-item"><strong>Supplier Update</strong><p>New vegetable stock will reach warehouse tomorrow.</p></div>
+          <div class="message-item"><strong>Buyer Inquiry</strong><p>FreshKart requested updated quote for 2 tons of tomatoes.</p></div>
+        </div>
+        <div class="action-row"><button class="dash-action" data-fake-action="Message sent">Send Message</button></div>
+      </div>
+    </section>
+
+    <section class="dash-panel" data-panel="settings">
+      <div class="dash-card">
+        <h2>Settings</h2>
+        <div class="settings-grid">
+          <div class="settings-box"><strong>Business Profile</strong><p>Update company name, GST details, warehouse address, and contact person.</p></div>
+          <div class="settings-box"><strong>Notifications</strong><p>Manage order, inventory, supplier, and price alerts.</p></div>
+        </div>
+        <div class="action-row"><button class="dash-action" data-fake-action="Settings saved">Save Settings</button></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="action-status" id="actionStatus"></div>
+<script src="script.js"></script>
+</body>
+</html>
